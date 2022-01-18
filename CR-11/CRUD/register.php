@@ -170,7 +170,7 @@ mysqli_close($connect);
                         <span class="text-danger"> <?php echo $picError; ?> </span>
                     </div> 
                     <!-- password -->
-                    <input type="password" name="pass" class="form-control mb-1 py-1" placeholder="Enter Password" maxlength="15">
+                    <input type="password" name="pass" class="form-control mb-1 py-1" placeholder="Create Password" maxlength="15">
                         <span class="text-danger"> <?php echo $passError; ?> </span>
                     <hr/>
                     <!-- submit button -->
