@@ -1,0 +1,16 @@
+.navbar-scrollDown {
+  background-color: #597387;
+  -webkit-transition: 0.65s;
+  transition: 0.65s;
+}
+
+.navbar-scrollDown a {
+  color: white;
+}
+
+#navbar_logo {
+  width: 45px;
+  height: 30px;
+  margin-right: -2%;
+}
+/*# sourceMappingURL=navbar.component.css.map */

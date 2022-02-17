@@ -1,0 +1,51 @@
+@font-face {
+  font-family: Ffont;
+  src: url(../../arcanum_order/Arcanum_Order.ttf);
+}
+
+h2 {
+  font-family: Ffont;
+  font-size: 4.5rem;
+}
+
+* {
+  padding: 0;
+  margin: 0 auto;
+  text-decoration: none;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* .ct {
+    border: rgb(0, 0, 0) solid;
+} */
+.item img {
+  width: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gt {
+  height: 40vh;
+}
+
+@media screen and (min-width: 992px) and (max-width: 4000px) {
+  .item img:hover {
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    visibility: visible;
+    opacity: 1;
+    -webkit-box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+            box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+  }
+}
+
+/* .Graffity {
+    border: black solid;
+} */
+/*# sourceMappingURL=events.component.css.map */

@@ -1,0 +1,31 @@
+<article class="container -auto">
+  <div class="row  location_contact">
+  <section class="col-lg-6 col-md-6 col-sm-12">
+    <h2 class="mb-4">Location</h2>
+    <p class="mb-2">JANE DOE</p>
+    <p>Kettenbrückengasse 23/2/12</p>
+    <p>1050 Vienna, Austria</p>
+    <p><b>Phone:</b> +43 660 1234 567 | <b>Email:</b> jane@doe.com</p>
+
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d332.44076060141384!2d16.35949931195778!3d48.196481922548266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d07866f5ea789%3A0x5c320007be5849de!2sKettenbr%C3%BCckengasse%2023%2C%201050%20Wien!5e0!3m2!1sen!2sat!4v1634635344426!5m2!1sen!2sat" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+
+  <section class="col-lg-6 col-md-6 col-sm-12">
+    <h2 class="mb-4">Contact form</h2>
+      <form [formGroup] = "info" (ngSubmit)="onSubmit(info.value)">
+            <input type="text" class="form-control" placeholder="Full name*" aria-label="Name*" formControlName= "name">
+            <input type="text" class="form-control" placeholder="Email*" aria-label="E-Mail*" formControlName= "email">
+            <textarea class="form-control col-6" id="exampleFormControlTextarea1" rows="7" formControlName="text" placeholder="Drop your message for me in here... :)"></textarea>
+            
+            <input type="checkbox" value="" id="flexCheckDefault">
+            <label id="subscribe_box" class="form-check-label">
+              Ask for your Newsletter
+            </label>
+            <p class="text-end text-danger">*Required fields</p>
+            <button id="submit_button" type="submit" class="btn btn-outline-dark button fw-bolder">Submit</button>
+      </form>
+    </section>
+  </div>
+</article>

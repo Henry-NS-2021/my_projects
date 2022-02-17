@@ -1,0 +1,47 @@
+@font-face {
+    font-family: Ffont;
+    src: url(../../arcanum_order/Arcanum_Order.ttf);
+}
+
+h2 {
+    font-family: Ffont;
+    font-size: 4.5rem;
+}
+
+* {
+    padding: 0;
+    margin: 0 auto;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+
+/* .ct {
+    border: rgb(0, 0, 0) solid;
+} */
+
+.item img {
+    width: 80%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gt {
+    height: 40vh;
+}
+
+@media screen and (min-width: 992px) and (max-width:4000px) {
+    .item img:hover {
+        transition: 0.6s;
+        transform: scale(1.1);
+        visibility: visible;
+        opacity: 1;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgb(0, 0, 0);
+    }
+}
+
+
+/* .Graffity {
+    border: black solid;
+} */

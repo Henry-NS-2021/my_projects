@@ -1,0 +1,82 @@
+@font-face {
+  font-family: Ffont;
+  src: url(../../arcanum_order/Arcanum_Order.ttf);
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: Ffont;
+}
+
+section {
+  margin: 10% 5%;
+}
+
+.container {
+  padding: 5% 0%;
+}
+
+.testi_position {
+  width: 100%;
+  padding: 0% 2%;
+  margin: 0%;
+}
+
+.small_text {
+  font-size: 0.7rem;
+}
+
+article {
+  background: rgba(236, 236, 236, 0.467);
+  border-radius: 3px;
+  padding: 10px 20px;
+  margin: 2% 0% 0%;
+}
+
+h1 {
+  margin: 10% 0% 10%;
+  font-size: 5vw;
+  font-weight: lighter;
+  text-align: center;
+}
+
+h6 {
+  margin: 1% 2% 1% 0%;
+  padding: 0% 0% 0.5%;
+  color: gold;
+  border-bottom: 1px gold solid;
+  text-align: right;
+}
+
+img {
+  width: 5em;
+  border-radius: 100px;
+  margin: 4% 5%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+img:hover {
+  -webkit-filter: unset;
+          filter: unset;
+}
+
+#partners {
+  background: #597387;
+  border-bottom-left-radius: 90px;
+  border-top-right-radius: 90px;
+  padding: 1% 5% 0%;
+}
+
+article div p {
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  #partners img {
+    width: 15vh;
+  }
+}
+/*# sourceMappingURL=testimonials.component.css.map */

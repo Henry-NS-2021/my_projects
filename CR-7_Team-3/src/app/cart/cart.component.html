@@ -1,0 +1,177 @@
+<div class="container rounded m-auto">
+  <div class="position_cart">
+
+  
+ <h2>All your orders</h2> 
+ <hr class="hr_title">
+
+    <!-- [List of added articles to the cart] -->
+    <div class="cart-item" *ngFor="let item of items">
+      <div id="selected_article" class="row my-2">
+        <!-- column img -->
+        <div class=" col-4 align-self-center">
+          <img src="{{ item.img }}" alt="{{ item.title }}">
+        </div>
+        <!-- column title -->
+        <div class="  col-3  align-self-center ">
+          <p>{{ item.title }}</p>
+        </div>
+        <!-- column quantity -->
+        <div class="col-2  align-self-center">
+          <p>x {{ item.qtty }}</p>
+        </div>
+        <!-- column price -->
+        <div class="col-3 align-self-center">
+          <p class="text-end">{{ item.price | currency: "EUR":"symbol" }}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- [Pricing legend] -->
+    <!-- Title Row -->
+    <section class="row price_row">
+        <!-- COLUMN 1  -->
+        <div class="col-5">
+          <p class="fs-6 fw-bold"></p>
+        </div>
+
+        <!-- COLUMN 2  -->
+        <div class="col-2 text-center price_text">
+          <p class="text-light">Original price</p>
+        </div>
+
+        <!-- COLUMN 3 -->
+        <div class="col-3 text-center price_text">
+          <p class="text-light">Discount size</p>
+        </div>
+
+        <!-- COLUMN 4 -->
+      <div class="col-2 text-center price_text ">
+        <p class="text-light">Final price</p>
+      </div>
+      </section>
+      <hr>
+
+    <!-- ROW 2 -->
+    <section class="row price_row">
+        <!-- COLUMN 1  -->
+        <div class="col-5">
+          <p class="fs-6 fw-bold">TOTAL COSTS</p>
+        </div>
+
+        <!-- COLUMN 2  -->
+        <div class="col-2 text-center price_style">
+          <!-- total price BEFORE discount -->
+          <ng-template [ngIf]="sum < 800">
+            <p>{{ sum | currency: "EUR":"symbol" }}</p>
+          </ng-template>
+          <!-- total price with before 10% discount (line0through effect) -->
+          <ng-template [ngIf]="sum >= 800 && ( sum < 1500)">
+            <p class="text-decoration-line-through">
+              {{ sum | currency: "EUR":"symbol" }}
+            </p>
+          </ng-template>
+          <!-- total price with before 20% discount (line0through effect) -->
+          <ng-template [ngIf]="sum >= 1500">
+            <p class="text-decoration-line-through">
+              {{ sum | currency: "EUR":"symbol" }}
+            </p>
+          </ng-template>
+        </div>
+
+        <!-- COLUMN 3 -->
+        <div class="col-3 text-center price_style">
+          <!-- discount size -->
+          <!-- NONE -->
+          <ng-template [ngIf]="sum < 800">
+            <p>€ 0.00 </p>
+          </ng-template>
+          <!-- 10% -->
+          <ng-template [ngIf]="sum >= 800 && ( sum < 1500)">
+            <p class="text-light">
+              - {{ sum - sumTen | currency: "EUR":"symbol" }} <span class="text-dark fw-bold"> (10%)</span>
+            </p>
+          </ng-template>
+          <!-- 20% -->
+          <ng-template [ngIf]="sum >= 1500">
+            <p class="text-light">
+              - {{ sum - sumTwen | currency: "EUR":"symbol" }} <span class="text-dark fw-bold"> (20%)</span>
+            </p>
+          </ng-template>
+        </div>
+
+        <!-- COLUMN 4 -->
+        
+      <div class="col-2 text-center price_style">
+        <!-- final price -->
+        <!-- FP without discount  -->
+        <ng-template [ngIf]="sum < 800">
+          <p>{{ sum | currency: "EUR":"symbol" }}</p>
+        </ng-template>
+        <!-- FP with 10% discount  -->
+        <ng-template [ngIf]="sum >= 800 && ( sum < 1500)">
+          <p class="fw-bold">{{ sumTen | currency: "EUR":"symbol" }}
+          </p>
+        </ng-template>
+        <!-- FP with 20%discount  -->
+        <ng-template [ngIf]="sum >= 1500">
+          <p class="fw-bold">{{ sumTwen | currency: "EUR":"symbol" }}
+          </p>
+        </ng-template>
+      </div>
+      </section>
+      <hr>
+      <section>
+      <p id="legend" class="text-muted border-bottom px-3">
+        <small>
+        10% discount for purchase over €800<br>
+        20% discount: for purchase over €1500
+        </small>
+      </p> 
+    </section>
+    
+    <!------------------------ END of Price counting ---------------------->
+
+
+    <br>
+    <br>
+    <!-- [The form for the purchase] -->
+    <h3 class="mt-5 mb-3 pb-1">Customer details</h3>
+    <hr class="hr_title">
+    <form [formGroup]="info" (ngSubmit)="onSubmit(info.value)">
+        <div class="row g-3 pb-3">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="First name*" aria-label="First name*" formControlName="fName" />
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Last name*" aria-label="Last name*" formControlName="lName" />
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Street, Zip Code, City, Country" aria-label="Address*" formControlName="adress" />
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="email@address.com" aria-label="E-Mail*" formControlName="mail" />
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <p class="text-danger">*Required field</p>
+          </div>
+          <div class="d-flex d-sm-flex  justify-content-end  ">
+            <div class=" ">
+              <input type="reset" class="btn mb-3 btn-outline-dark fw-bold  py-0 px-5 " value="empty">
+            </div>
+            <div class=" ">
+              <input type="submit" class="btn mb-3 btn-outline-dark fw-bold ms-4   py-0 px-5 " value="purchase"/>
+          </div>
+        </div>
+        </div>
+       
+    </form>
+    <!-- </div>
+  </section>-->
+</div>
+</div> 

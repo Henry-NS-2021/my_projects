@@ -1,0 +1,60 @@
+.logo, .logo li {
+  padding: 0;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+li {
+  margin: 0%;
+  list-style-type: none;
+  line-height: 6px;
+}
+
+a {
+  margin: 0% 0.8% 1%;
+  text-decoration: none;
+  color: khaki;
+  -webkit-transition: color 0.55s;
+  transition: color 0.55s;
+}
+
+a:hover {
+  color: whitesmoke;
+}
+
+hr {
+  margin: .75rem 0.8%;
+  background: khaki;
+}
+
+i {
+  font-family: Ffont;
+}
+
+footer {
+  text-align: center;
+  padding: 5vh 2%;
+  background-color: #597387;
+  color: lightgrey;
+}
+
+#copyright {
+  margin: 4vh 0vh 1vh;
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+/*# sourceMappingURL=footer.component.css.map */

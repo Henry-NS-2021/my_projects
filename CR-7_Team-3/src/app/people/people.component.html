@@ -1,0 +1,26 @@
+<div class="container mt-3">
+    <h2 class="my-3">
+        Graffiti</h2>
+    <div class=" Graffity row p-5  ">
+
+        <div *ngFor="let graf of Graffity" class="col-lg-6 col-md-6 col-sm-12 ">
+            <a class="item d-flex justify-content-center  my-2  " href="{{graf.img}}" data-fancybox="gallery" data-caption="">
+                <img src="{{graf.img}}" alt="sans" class="gt ">
+            </a>
+
+        </div>
+    </div>
+
+    <h2 class="mt-5">Street Dance</h2>
+    <div class=" Graffity row pt-4  ">
+
+        <div *ngFor="let dance of StreetDance" class="col-lg-6 col-md-6 col-sm-12 cl  ">
+            <a class="item d-flex justify-content-center my-2  " href="{{dance.img}}" data-fancybox="gallery" data-caption="">
+                <img src="{{dance.img}}" alt="sans" class="gt">
+
+                <!-- <p class="img-description">People</p> -->
+            </a>
+
+        </div>
+    </div>
+</div>

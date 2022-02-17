@@ -1,0 +1,80 @@
+@font-face {
+  font-family: Ffont;
+  src: url(../../arcanum_order/Arcanum_Order.ttf);
+}
+
+h2 {
+  font-family: Ffont;
+  font-size: 3rem;
+  margin: 0% 0% 2%;
+}
+
+.container {
+  padding: 5% 0%;
+}
+
+.position_cart {
+  padding: 0% 2%;
+  margin: 0%;
+}
+
+h1 {
+  margin: 0% 0% 10%;
+}
+
+img {
+  width: 15vw;
+}
+
+.cart-item p {
+  font-size: 1rem;
+}
+
+#selected_article {
+  background: rgba(231, 231, 231, 0.959);
+  padding: 0.5% 1%;
+  margin: 5% 0%;
+  border: 1px lightgray solid;
+}
+
+.price_row {
+  margin: 0;
+  background: #597387;
+  color: khaki;
+}
+
+h3 {
+  margin: 50% 0% 3%;
+  color: #597387;
+  font-size: 3rem;
+  font-family: Ffont;
+}
+
+hr {
+  margin: 0;
+  background: #597387;
+}
+
+.hr_title {
+  margin: -1em 0em 3em;
+}
+
+.text_red {
+  color: #b6aeae;
+}
+
+@media screen and (max-width: 520px) {
+  .cart-item p {
+    font-size: 0.8rem;
+  }
+  .image_display {
+    display: none !important;
+  }
+  .price_text {
+    font-size: 0.7rem;
+  }
+  .price_style {
+    font-size: 0.65rem;
+  }
+}
+/*# sourceMappingURL=cart.component.css.map */
