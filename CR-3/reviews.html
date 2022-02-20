@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Su Herui">
+    <meta name="description"
+        content="VKUS: Delicious food made with heart and passion. We believe that each and single meal must be prepared with simplicity, heart and fresh ingredients of course">
+    <!-- external: bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- external: css stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Code Review 3</title>
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-warning mt-0">
+        <div class="container-fluid">
+            <a class="navbar-brand border-end border-dark ps-2 pe-0" href="index.html"><img class="img-thumbnail"
+                    src="img/layout/logo-removebg-preview.png" alt="logo" width="30" height="24"> <span class="navbar-brand fw-bold px-2">VKUS</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html#starters">Starters</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html#main_course">Main Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html#desserts">Desserts</a>
+                    </li>
+                    <li class="nav-item border-end border-dark pe-3">
+                        <a class="nav-link" href="menu.html#beverages">Beverages</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a class="nav-link" href="reviews.html">Reviews</a>
+                    </li>
+                    <li class="nav-item ps-3">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero image -->
+    <div id="review_img" style="height: auto">
+        <section id="review_title" class="position-absolute top-0 d-flex align-items-end pb-5 h-100 w-100">
+        <h1 class="fw-bolder display-1 text-start text-light ps-5 mb-5">What our <span class="text-warning">Guests</span> say...</h1>
+        </section>
+    </div>
+
+    
+    <main>
+        <!-- COMMENTS section  -->
+        <div class="container d-grid py-5 m-auto">
+            <br>
+            <section class="row p-sm-0 px-md-3 px-lg-5">
+            <!-- comment#1  -->
+            <div class="col-sm-12 bg-light border-none p-3 rounded-2 shadow">
+                <p>
+                    <span class="fw-bold text-dark">Yuwong Zhang </span><span class="text-secondary fst-italic">| from Sanghai |
+                        visited on 05 August 2021</span>
+                </p>
+                <hr>
+                <h6 class="card-subtitle text-muted">Positively surprised!</h6>
+                <p>I guess not having gotten the concept of the restaurant first: "How can you travel on the spot? It is
+                    just silly!" The various tastes the restaurant brought together is nothing like what I have
+                    experienced before. Now, I am curious to eat these dishes in their country of origin.
+                    <br>
+                    Btw, another silly thing: even the softdrinks they serve fit the dishes they cook O.o <br>
+                    <br> 完美的啊！
+                </p>
+                <p class="text-end m-0 p-0">
+                    <span class="text-warning">&starf;&starf;&starf;&starf;&star;</span>
+                    <span>(4.0)</span>
+                </p>
+            </div>
+            <br>
+            <!-- comment#2  -->
+            <div class="col-sm-12 my-4 bg-light p-3 rounded-2 shadow">
+                <p>
+                    <span class="fw-bold text-dark">Ulan Berdimugamedov </span><span class="text-secondary fst-italic">| from
+                        Samarkand | visited on 19 May 2021</span>
+                </p>
+                <hr>
+                <h6 class="card-subtitle text-muted">Traveled the world at the table</h6>
+                <p>The service was not impressive, just what is needed: not too much, not too little. The food on the
+                    other hand, blew my mind. <br>
+                    I always believed that no one could cook Plov better than my Uybek uncle. Yet, Vkus' chef prooved me
+                    wrong. Bravo!</p>
+                <p class="text-end m-0 p-0">
+                    <span class="text-warning">&starf;&starf;&starf;&starf;&star;</span>
+                    <span>(4.5)</span>
+                </p>
+            </div>
+            <br>
+            <!-- comment#3 -->
+            <div class="col-sm-12 my-4 bg-light p-3 rounded-2 shadow">
+                <p>
+                    <span class="fw-bold text-dark">Verena Lochmann </span><span class="text-secondary fst-italic">| from Linz |
+                        visited on 02 April</span>
+                </p>
+                <hr>
+                <h6 class="card-subtitle text-muted">Simpel und G'schmackig</h6>
+                <p>Es ist wirklich überraschend, wie Essen mit wenig Gewürzen und einer begrenzten Menge an Zutaten
+                    schmecken kann. Jede Zutat scheint das Beste von sich selbst zu liefern. Mein Sohn, der auch als
+                    Koch arbeitet, war von einer solchen Herangehensweise tief beeindruckt. <br>
+                    Wir werden auf jeden Fall nach Vkus wiederkommen! </p>
+                <p class="text-end m-0 p-0">
+                    <span class="text-warning">&starf;&starf;&starf;&starf;&starf;</span>
+                    <span>(5.0)</span>
+                </p>
+            </div>
+            <br>
+            <!-- comment#4 -->
+            <div class="col-sm-12 bg-light p-3 rounded-2 shadow">
+                <p>
+                    <span class="fw-bold text-dark">Clauthilde Lemans </span><span class="text-secondary fst-italic">| from Bordeaux
+                        | visited on 30 March 2021</span>
+                </p>
+                <hr>
+                <h6 class="card-subtitle text-muted">O la la...</h6>
+                <p>Je ne sais pas quoi dire à part: 'Chapeau bas'! Croyant avoir tout vu et goûté dans la haute
+                    gastronomie, me voilà déconcertée par l'efficace simplicité du restaurant...</p>
+                <p class="text-end m-0 p-0">
+                    <span class="text-warning">&starf;&starf;&starf;&starf;&starf;</span>
+                    <span>(5.0)</span>
+                </p>
+            </div>
+            </section>
+        </div>
+     
+
+
+
+    </main>
+
+
+    <!-- FOOTER  -->
+    <footer class="bg-dark m-0 pt-2 pb-3 d-flex flex-column justify-content-between">
+        <hr class="bg-warning py-0">
+
+        <p class="text-center text-decoration-none mt-1">
+            <a class="text-decoration-none text-warning fw-lighter" aria-current="page" href="index.html">Home |
+            </a>
+
+            <a class="text-decoration-none text-warning fw-lighter" href="menu.html">Menu | </a>
+
+            <a class="text-decoration-none text-warning fw-lighter" href="reviews.html">Reviews | </a>
+            <a class="text-decoration-none text-warning fw-lighter" href="contact.html">Contact</a>
+        </p>
+
+ 
+        <p class="fw-lighter text-center text-light pt-4 pb-0 mb-0">VKUS &copy; All right Reserved 2021</p>
+        <p class="fw-lighter text-center text-muted pt-0 mt-0"><small>- Created by Henry Ngo-Sytchev -</small></p>
+    </footer>
+
+    <!-- external: bootstrap javascript -->
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- external: own javascript -->
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

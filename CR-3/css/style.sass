@@ -1,0 +1,232 @@
+// --------------------------------------- VARIABLES
+$header_footer_color: rgb(20, 29, 26)
+$clr_gold: rgb(254, 194, 45)
+$clr_white: whitesmoke
+$clr_black: rgba(black, 0.6)
+
+// --------------------------------------- GENERAL
+*
+    box-sizing: border-box
+
+body
+    margin: 0px
+
+header
+    height: 24vh
+    background-color: $header_footer_color
+    text-align: center
+
+main
+    position: relative
+    min-height: 100vh
+    margin: 0
+
+#our_media
+    position: fixed
+    top: 30vh
+
+    img
+        display: block
+        width: 1.5rem
+        border: $clr_white solid 1px
+        border-radius: 2px
+        transition: transform .35s, padding .2s
+
+    img:hover
+        padding: .1rem
+        transform: scale(1.15)
+
+    // footer
+footer
+    position: relative
+    height: auto
+
+    .sm_icons
+        width: 2.5rem
+        margin: .125rem .45rem
+        padding: 0.1rem
+        box-shadow: 0rem 0rem 10px 80px $clr_gold inset
+
+    p
+        font-size: 1em
+
+    a
+        transition: 0.25s ease-in-out
+
+    a:hover
+        color: $clr_white!important
+/* ----------------------------------------- Index page ----------------------------------------- */
+// --------------------------------------- Link to Website
+div#redirect, #website-link, #restaurant-name
+    z-index: 1
+
+div#redirect
+    position: absolute
+    top: 2vh
+    right: 0vh
+
+#website-link
+    background: rgba($clr_white, 0.5)
+    padding: .5rem 1.5rem .5rem 1.2rem
+    font-size: 1.45rem
+    font-weight: 400
+
+    a
+        color: $clr_black
+        transition: color .7s, padding .3s ease-in
+
+    a:hover
+        color: $clr_gold
+        padding: .5rem 1rem .5rem 1rem
+        text-shadow: 0px 0px 7px $clr_black
+
+#restaurant-name
+    top: calc(30%)
+    left: calc(25% - 12.5%)
+    text-shadow: 0px 10px 10px black
+    font-size: 12rem
+
+// --------------------------------------- CAROUSEL
+#carouselExampleCaptions
+    position: relative
+    height: 100vh
+    z-index: 0
+
+    img
+        height: 100vh
+        object-fit: cover
+
+// carousel-caption
+.carousel-caption
+    color: $clr_white
+    text-shadow: 0px 5px 10px $clr_black
+    border-right: $clr_gold 4px solid
+    border-left: $clr_gold 4px solid
+    // border-radius: 5px
+    background: $clr_black
+    font-size: 1.35rem
+    margin-bottom: 6vh
+
+    h1
+        color: $clr_gold
+        font-size: 3.5em
+        text-transform: uppercase
+
+    p
+        font-weight: 100
+
+        .key_words
+            color: $clr_gold
+
+/* ----------------------------------------- Review page ----------------------------------------- */
+#review_img
+    position: relative
+    background: url("../img/layout/review.jpeg") no-repeat 65% 0px
+    background-size: cover
+    min-height: 95vh
+
+#review_title
+    background: $clr_black linear-gradient(black 0%, transparent 30%, transparent 60%, black 90%)
+
+    input
+        padding: .325rem .5rem
+        margin-bottom: 12px
+
+/* ----------------------------------------- Contact page ----------------------------------------- */
+main#contact_page
+    background: url("../img/layout/contact_bg.jpg") no-repeat right center
+    background-size: cover
+    min-height: 95vh
+    background-attachment: fixed
+
+#contact_page_container
+    max-width: 2560px
+    padding: 2rem 2rem 4rem
+
+    >section
+        width: 100vw
+
+.blurred_object
+    max-width: 100%
+    backdrop-filter: blur(4px)
+
+// contact details
+ul
+    list-style-type: none
+    padding: 0
+
+.location iframe
+    width: 100%
+    min-height: 220px
+
+// restaurant name box
+div#restaurant_name_section
+    width: 100%
+    height: 100%
+    padding: 10vh 2vw
+    border: $clr_gold 10px solid
+
+    p
+        margin-top: 10%
+        font-size: clamp(6rem, 20%, 12rem)
+        text-shadow: 3px 5px 15px black
+        line-height: 30px
+        font-weight: 100
+
+    span
+        font-size: 1.25rem
+        text-align: left
+
+// contact form
+#contact_form,
+    background: $clr_black
+    width: clamp(120px, 100%, 720px)
+
+//--------------------------------------------------- MEDIA QUERY [Phone-Tablet]
+
+@media screen and (max-width: 568px)
+    // CONTACT PAGE
+    main#contact_page>div
+    padding: 10vh 0vh
+    width: clamp(120px, 100%, 720px)
+
+    #contact_page_container
+        padding: 0
+
+        >section
+            width: 92vw
+
+    .location iframe
+        min-height: 420px
+
+    // restaurant name box
+    div#restaurant_name_section
+        height: 60%
+        color: $clr_gold
+        border: $clr_white 10px solid
+
+        p
+            margin-top: 10%
+            font-size: clamp(1.5rem, 25vw, 6.5rem)
+            text-shadow: 3px 5px 15px black
+
+        span
+            font-size: 1rem
+            text-align: left
+            line-height: 0px
+
+    // contact form
+    #contact_form
+        display: none
+
+    .location
+        padding: 0rem 1rem!important
+
+@media screen and (max-width: 768px)
+    // INDEX PAGE
+    #restaurant-name
+        word-wrap: break-word
+        top: 20vh
+        height: auto
+        font-size: clamp(7rem, 50vw, 10rem)
+        color: $clr_gold!important
