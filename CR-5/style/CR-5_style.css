@@ -48,12 +48,12 @@ main {
   height: 100vh;
   background: #40916c;
   color: #d8f3dc;
-  padding: 30vh 1rem 2rem;
+  padding: 20vh 1rem 2rem;
   text-align: center;
 }
 
 #intro h1 {
-  font-size: clamp(1.75rem, 13vw, 10rem);
+  font-size: clamp(1.75rem, 9vw, 10rem);
   margin: 2rem 0rem 2rem;
 }
 

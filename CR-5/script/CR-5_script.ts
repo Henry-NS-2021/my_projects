@@ -2,7 +2,7 @@
 
 let section: HTMLElement = document.createElement("section");
 (section as HTMLElement).innerHTML = `
-<div id="intro">
+    <div id="intro">
     <h1>Travel-o-Matic Blog</h1>
     <p>Welcome to Austria, its various places, tastes, sounds and flavours</p>
     </div>
