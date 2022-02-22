@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap')
+
+/* variables for general colors */
+$header: rgb(67,74,84)
+$navbar: #95d5b2
+$background: #d8f3dc
+$text: white
+$footer: #40916c
+$border: #618685
+
+/* variables for card colors */
+$card_border: #746560
+$card_bg: #g3c7b7
+$card_footer_bg: #746560
+$card_title: #c89d68
+$card_title_bg: #312921
+$card_hr: #873c1e
+$card_txt: #746560
+$card_footer_txt: #d3c7b7
+$card_link: #c89d68
+
+/* ariable for the font */
+$font_fam: 'Ephesis', cursive
+
+*   
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+header
+    position: relative
+    height: 100vh
+    background-color: $header
+    color: $text
+    background-image: url("../img/header.jpg")
+    background-repeat: no-repeat
+    background-position: center center 
+    background-size: cover
+
+    #website_name
+        position: absolute
+        bottom: 5px
+        left: 10px
+        font-size: 8rem
+        font-family: $font_fam
+        text-shadow: 20px 3px 12px $background
+
+
+#navigation_bar
+    background-color: $navbar
+    border-top: $border
+
+    a
+        font-weigth: lighter
+        font-family: $font_fam
+
+main
+    height: auto
+    background: $background
+
+#intro  
+    height: 100vh
+    background: $footer
+    color: $background
+    padding: 30vh 1rem 2rem
+    text-align: center 
+
+    h1
+        font-size: clamp(1.75rem, 13vw, 10rem)
+        margin: 2rem 0rem 2rem
+
+    p
+        font-size: clamp(1rem, 3.5vw, 4.5rem)
+
+article
+    max-width: clamp(50ch, 80vw, 85ch)
+    margin: 10vh auto 8vh
+
+    h3
+        text-align: center
+        text-transform: uppercase
+        margin-bottom: 24pt
+    
+    p:first-letter
+        text-align: justify
+        font-size: 3rem
+        padding-right: .225rem
+
+    p
+        line-height: 24pt
+
+#sort
+    width: 95vw
+    // padding: 0rem 1rem
+    text-align: right
+    margin: 1rem auto
+
+    button
+        padding: .25rem 1.5rem
+        font-weight: 500
+        border-radius: 5px
+        background-image: linear-gradient($navbar, $footer 50%, $navbar 130%)
+        color: $background
+
+    hr
+        width: 95vw
+        margin: auto
+
+
+footer
+    height: 20vh
+    background: $footer
+    color: $text
+
+/* ------------------
+    media query small screen
+    ------------------------ */
+@media screen and (max-width: 767px)
+
+    header
+        background-image: url("../img/mobile_header.jpg")!important
+        
+        #website_name
+            bottom: 25%
+            font-size: clamp(1.5rem, 18vw, 6rem)
+            font-family: $font_fam
+            text-shadow: -10px -8px 6px $card_title
+
+
+    #navigation_bar
+        background-color: $card_title_bg!important
+        color: $card_title!important
+        border: $card_title_bg 1px solid!important
+
+        a
+            font-color: white!important
+
+    main
+        background-color: white
+
+    #intro  
+        background: $card_title_bg
+        color: $card_title
+        padding: 20vh 2vw 5vh
+
+    article
+        color: $card_footer_bg
+        padding: 0rem 1rem
+        text-align: justify
+        margin-bottom: 1rem
+
+    #sort
+        button
+            margin: 2rem 0rem -1rem
+            padding: .25rem 2.5rem
+            background-image: linear-gradient($card_title, $card_footer_bg 10%, $card_footer_bg 80%, $card_title 110%)
+            color: white
+
+    footer
+        background: $card_footer_bg
+        text-shadow: 2px 1px 10px $footer
+        padding: 0
+        
+        span
+            font-family: $font_fam
+            font-size: 3.5vw
+            text-shadow: 2px 1px 10px $footer
+
+    /* hiding the pictures */
+    #card_img 
+        display: none
+
+    /* styling the cards */
+    #card_settings
+        background-color: $card_bg
+        border: inset 5px $card_border
+        border-radius: 20px
+        color: $card_txt
+
+        h3
+            color: $card_title
+            font-size: 180%
+            padding: 3% 3% 
+            background-color: $card_title_bg
+            background-padding: 5%
+
+        i
+            background: $card_footer_bg
+            color: $card_footer_txt
+            border-top: 5px solid $card_link
+
+        hr
+            color: $card_hr
+
+        a
+            color: $card_link
+            text-decoration: none
+        
+        span
+            color: $card_link
