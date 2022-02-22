@@ -34,7 +34,7 @@
    } else {
        $seniors = "<tr>
                     <td class='text-center' colspan='6'>
-                    <p class='py-3 fs-4 lh-md'>Sorry, there are currently no Senior pets at the moment.<br> <span class='text-success'>Please, come again later.<span></p>
+                    <p class='py-3 fs-4 lh-md'>Sorry, there are no Senior pets at the moment.<br> <span class='text-success'>Please, come again later.<span></p>
                     </td>
                 </tr>";
    }
@@ -57,6 +57,8 @@
     <?php require_once("../components/bootstrap.php")?>
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/style.css">
+    <!-- website icon in the browser -->
+    <link rel="shortcut icon" href="../pictures/layout_img/logo_pets.jpg" type="image/jpg">
     <title>Code Review 11: Adopt a pet - Seniors</title>
 </head>
 <body>

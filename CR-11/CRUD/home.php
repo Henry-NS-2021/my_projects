@@ -121,6 +121,8 @@ mysqli_close($connect);
 }
 
 </style>
+   <!-- website icon in the browser -->
+   <link rel="shortcut icon" href="pictures/layout_img/logo_pets.jpg" type="image/jpg">
    <title>Welcome - <?php echo $row['first_name']; ?></title>
 </head>
 <body>

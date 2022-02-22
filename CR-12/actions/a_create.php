@@ -92,6 +92,8 @@ if ($_POST){
             background-size: cover;
         }
     </style>
+    <!-- website icon in the browser -->
+    <link rel="shortcut icon" href="../img/layout/logo_navbar.png" type="image/jpg">
     <title>Code Review-12: Mount Everest</title>
 </head>
 <body>

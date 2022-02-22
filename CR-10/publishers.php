@@ -50,6 +50,8 @@
             min-height: 70vh;
         }   
     </style>
+    <!-- website icon in the browser -->
+    <link rel="shortcut icon" href="pictures/layout/logo.png" type="image/png">
     <title>Code Review 10: Publishers</title>
 </head>
 <body id="bg">
@@ -60,20 +62,24 @@
         require_once("components/navbar.php"); //navbar component
     ?>
     <!-- [MAIN] -->
-    <table class="table table-muted table-hover text-light mb-5 mx-auto w-75">
-        <thead class="table-dark text-white text-center fw-light">
-            <tr class="align-middle">
-                <td>Publisher</td>
-                <td>Address</td>
-                <td>About</td>
-            </tr>
-        </thead>
-        <tbody>
-            <main class="py-5 px-3">
-            <?= $publishers ?>
-            </main>
-        </tbody>
-    </table>
+    <main class="px-3 pt-0">
+    <div class="table-responsive mt-0">
+        <table class="table table-muted table-hover text-light mb-5 mx-auto w-75">
+            <thead class="table-dark text-white text-center fw-light">
+                <tr class="align-middle">
+                    <td>Publisher</td>
+                    <td>Address</td>
+                    <td>About</td>
+                </tr>
+            </thead>
+            <tbody>
+                <div class="py-5 px-3">
+                <?= $publishers ?>
+                </div>
+            </tbody>
+        </table>
+    </div>
+    </main>
 
     <!-- [FOOTER] -->
     <?php require_once("components/footer.php"); ?>

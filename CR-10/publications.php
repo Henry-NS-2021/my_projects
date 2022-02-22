@@ -55,6 +55,8 @@
             min-height: 70vh;
         }   
     </style>
+    <!-- website icon in the browser -->
+    <link rel="shortcut icon" href="pictures/layout/logo.png" type="image/png">
     <title>Code Review 10: Publications</title>
 </head>
 <body id="bg">
@@ -63,7 +65,8 @@
     $url = "";
     require_once("components/hero.php"); 
     require_once("components/navbar.php"); ?>
-    <main class="pt-1 pb-3 px-3">
+    <main class="pt-4 pb-3 px-3">
+        <div class="table-responsive">
         <table class="table table-muted border text-light mb-5 mx-auto w-75">
             <thead class="table-dark text-white text-center fw-light">
                 <tr class="align-middle">
@@ -79,6 +82,7 @@
                 
             </tbody>
         </table>
+    </div>
     </main>
     <!-- [FOOTER] -->
     <?php require_once("components/footer.php"); ?>

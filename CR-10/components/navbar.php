@@ -19,7 +19,7 @@
 <body>
 
 <!-- NAVBAR-1 -->
-<div class="text-start bg-success mb-0 d-flex align-items-center">
+<nav class="text-start bg-success mb-0 d-flex align-items-center">
         <a href="index.php">
             <img class="rounded-pill border border-1 border-muted mx-3 my-2" src="<?= $url;?>pictures/layout/logo.png" alt="logo" width="50" height="50" class="d-inline-block align-text-top">
         </a>
@@ -32,7 +32,7 @@
             <span class="px-2 py-0 mb-1 mx-1">ADD MEDIA</span>
         </a>
         </p>
-</div>
+</nav>
 
 </body>
 </html>

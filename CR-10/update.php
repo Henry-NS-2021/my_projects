@@ -69,6 +69,8 @@
             min-height: 70vh;
         }   
     </style>
+    <!-- website icon in the browser -->
+    <link rel="shortcut icon" href="pictures/layout/logo.png" type="image/png">
     <title>Code Review 10: Update</title>
 </head>
 <body>
@@ -82,12 +84,6 @@
     <!-- [MAIN] -->
     <main class="bg-dark py-5">
     <!-- [FORM] -->
-
-    <!-- <legend  class="h2 display-1 py-3 mt-0 text-center text-warning">
-        <h1 class="mt-4">Update request <img class="img-thumbnail rounded-3 border border-1" src="pictures/<?php echo $picture; ?>" alt= "<?php echo $title ?>">
-    </h1>
-    <hr>
-    </legend> -->
     <form class="w-75 mx-auto my-3" method="POST" action="actions/a_update.php" enctype="multipart/form-data" class="rounded-3 bg-dark mx-5">
         
         <table class="table mx-0 mb-0 text-white fs-6">

@@ -33,6 +33,8 @@
         }   
 
     </style>
+    <!-- website icon in the browser -->
+    <link rel="shortcut icon" href="pictures/layout/logo.png" type="image/png">
     <title>Code Review 10: Create</title>
 </head>
 <body>
@@ -44,9 +46,6 @@
     ?>
     <!-- [MAIN] -->
     <main id="bg" class="py-5">
-    <legend  class="h2 display-1 py-3 mt-0 text-center text-warning">
-        <h1 class="mt-4">Create request</h1><hr>
-    </legend>
     <!-- [FORM] -->
     <form class="w-75 mx-auto" method="POST" action="actions/a_create.php" enctype="multipart/form-data" class=" mx-5 my-0">
         

@@ -93,6 +93,8 @@
             color: whitesmoke;
         }
     </style>
+    <!-- website icon in the browser -->
+    <link rel="shortcut icon" href="img/layout/logo_navbar.png" type="image/jpg">
     <title>CR-12: Mount Everest</title>
 </head>
 <body>

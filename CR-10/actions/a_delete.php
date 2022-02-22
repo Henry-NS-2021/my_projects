@@ -47,6 +47,8 @@
             min-height: 70vh;
         }
     </style>
+    <!-- website icon in the browser -->
+    <link rel="shortcut icon" href="../pictures/layout/logo.png" type="image/png">
     <title>Code Review 10: Deleted</title>
 </head>
 <body>

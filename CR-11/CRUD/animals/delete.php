@@ -2,10 +2,10 @@
 session_start();
 require_once '../components/db_connect.php';
 
-// if (isset($_SESSION['user']) != "") {
-//    header("Location: ../home.php");
-//    exit;
-// }
+if (isset($_SESSION['user']) != "") {
+   header("Location: ../home.php");
+   exit;
+}
 
 if (!isset($_SESSION['adm']) && !isset($_SESSION['user'])) {
    header("Location: ../index.php");
@@ -87,6 +87,8 @@ if (!isset($_SESSION['adm']) && !isset($_SESSION['user'])) {
     <?php require_once("../components/bootstrap.php")?>
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/style.css">
+    <!-- website icon in the browser -->
+    <link rel="shortcut icon" href="../pictures/layout_img/logo_pets.jpg" type="image/jpg">
     <title>Code Review 11: Adopt a pet</title>
 </head>
 <body class="dashboard_body">

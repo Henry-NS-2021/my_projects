@@ -79,6 +79,8 @@
             width: 100%;
         }
     </style>
+    <!-- website icon in the browser -->
+    <link rel="shortcut icon" href="pictures/layout/logo.png" type="image/png">
     <title>Code Review 10: Media Details</title>
 </head>
 <body>

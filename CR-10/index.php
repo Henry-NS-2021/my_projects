@@ -56,6 +56,8 @@
             min-height: 70vh;
         }   
     </style>
+    <!-- website icon in the browser -->
+    <link rel="shortcut icon" href="pictures/layout/logo.png" type="image/png">
     <title>Code Review 10: Big Library</title>
 </head>
 <body>
@@ -66,6 +68,7 @@
     <!-- [NAVBAR] -->
     <?php require_once("components/navbar.php"); ?>
     <main id="bg" class="py-5">
+        <div class="table-responsive">
     <table class="table table-secondary table-striped table-hover border border-success my-0 mx-auto w-75">
         <thead class="table-dark text-center">
             <tr class="align-middle fw-lighter">
@@ -80,6 +83,7 @@
             <?= $media ?>
         </tbody>
     </table>
+    </div>
     </main>
     <!-- [FOOTER] -->
     <?php require_once("components/footer.php"); ?>
