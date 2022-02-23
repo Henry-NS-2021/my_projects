@@ -44,13 +44,22 @@
 
     <!-- MAIN -->
     <main>
-      <!-- TO DO: Add sorting function  -->
+      <!-- Sort button  -->
       <div id="sort">
-        <p id="sort-button"><button>Sort</button></p> 
+        <p>
+        <select id="sort-btn">
+          <option disabled selected>Sort by</option>
+          <option value="A-Z">Alphabet (A-Z)</option>
+          <option value="Z-A">Alphabet (Z-A)</option>
+        </select>
+        </p> 
         <hr>
       </div>
-      <div id="output" class="container-fluid row mx-auto py-5"></div>
-
+      <section class="container-fluid">
+        <div id="output" class="row mx-auto pb-5">
+          <!-- Here come the events -->
+        </div>
+      </section>
     </main>
     <!-- FOOTER -->
     <footer class="py-5">

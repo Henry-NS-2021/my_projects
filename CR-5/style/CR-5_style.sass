@@ -27,6 +27,9 @@ $font_fam: 'Ephesis', cursive
     margin: 0
     box-sizing: border-box
 
+body
+    background: $background
+
 header
     position: relative
     height: 100vh
@@ -62,7 +65,7 @@ main
     height: 100vh
     background: $footer
     color: $background
-    padding: 20vh 1rem 2rem
+    padding: calc(50vh - clamp(1.75rem, 12vw, 12rem)) 1rem 2rem
     text-align: center 
 
     h1
@@ -72,6 +75,7 @@ main
     p
         font-size: clamp(1rem, 3.5vw, 4.5rem)
 
+// text before the cards
 article
     max-width: clamp(50ch, 80vw, 85ch)
     margin: 10vh auto 8vh
@@ -89,22 +93,31 @@ article
     p
         line-height: 24pt
 
+    // sorting button
 #sort
     width: 95vw
-    // padding: 0rem 1rem
     text-align: right
-    margin: 1rem auto
+    margin: 6rem auto 1rem
 
-    button
+    #sort-btn
         padding: .25rem 1.5rem
         font-weight: 500
+        font-size: 1.1rem
         border-radius: 5px
         background-image: linear-gradient($navbar, $footer 50%, $navbar 130%)
         color: $background
 
+    #sort-btn option
+        color: $footer
+        background: $background
+        font-size: .85rem
+
     hr
         width: 95vw
-        margin: auto
+        margin: -.8rem auto 0rem
+        padding: .3rem 0rem
+        background: $footer
+        border-radius: 50px
 
 
 footer
@@ -150,11 +163,21 @@ footer
         margin-bottom: 1rem
 
     #sort
-        button
+
+        #sort-btn, #sort-btn option
+            color: white
+        
+        #sort-btn
             margin: 2rem 0rem -1rem
             padding: .25rem 2.5rem
             background-image: linear-gradient($card_title, $card_footer_bg 10%, $card_footer_bg 80%, $card_title 110%)
-            color: white
+        
+            option
+                background: $card_title
+
+        hr
+            background: $card_title_bg
+            margin-top: -.325rem
 
     footer
         background: $card_footer_bg

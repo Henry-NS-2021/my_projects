@@ -9,6 +9,10 @@
           box-sizing: border-box;
 }
 
+body {
+  background: #d8f3dc;
+}
+
 header {
   position: relative;
   height: 100vh;
@@ -48,7 +52,7 @@ main {
   height: 100vh;
   background: #40916c;
   color: #d8f3dc;
-  padding: 20vh 1rem 2rem;
+  padding: calc(50vh - clamp(1.75rem, 12vw, 12rem)) 1rem 2rem;
   text-align: center;
 }
 
@@ -85,21 +89,31 @@ article p {
 #sort {
   width: 95vw;
   text-align: right;
-  margin: 1rem auto;
+  margin: 6rem auto 1rem;
 }
 
-#sort button {
+#sort #sort-btn {
   padding: .25rem 1.5rem;
   font-weight: 500;
+  font-size: 1.1rem;
   border-radius: 5px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#95d5b2), color-stop(50%, #40916c), color-stop(130%, #95d5b2));
   background-image: linear-gradient(#95d5b2, #40916c 50%, #95d5b2 130%);
   color: #d8f3dc;
 }
 
+#sort #sort-btn option {
+  color: #40916c;
+  background: #d8f3dc;
+  font-size: .85rem;
+}
+
 #sort hr {
   width: 95vw;
-  margin: auto;
+  margin: -.8rem auto 0rem;
+  padding: .3rem 0rem;
+  background: #40916c;
+  border-radius: 50px;
 }
 
 footer {
@@ -143,12 +157,21 @@ footer {
     text-align: justify;
     margin-bottom: 1rem;
   }
-  #sort button {
+  #sort #sort-btn, #sort #sort-btn option {
+    color: white;
+  }
+  #sort #sort-btn {
     margin: 2rem 0rem -1rem;
     padding: .25rem 2.5rem;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#c89d68), color-stop(10%, #746560), color-stop(80%, #746560), color-stop(110%, #c89d68));
     background-image: linear-gradient(#c89d68, #746560 10%, #746560 80%, #c89d68 110%);
-    color: white;
+  }
+  #sort #sort-btn option {
+    background: #c89d68;
+  }
+  #sort hr {
+    background: #312921;
+    margin-top: -.325rem;
   }
   footer {
     background: #746560;

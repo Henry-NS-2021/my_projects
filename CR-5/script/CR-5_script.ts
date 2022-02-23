@@ -1,3 +1,5 @@
+"use strict";
+
 // ---------------------------------------- INSERT TEXT BEFORE THE BLOG ENTRIES
 
 let section: HTMLElement = document.createElement("section");
@@ -59,7 +61,7 @@ class Locations {
         <div id="card_settings" class="card my-2">
             <img id="card_img" class="card-img-top rounded" src="${this.img}" alt="${this.name}">
             <div class="card-body">
-                <h3 class="card-title text-center mb-3">${this.name}</h3>
+                <h3 class="card-title rounded-3 text-center mb-3">${this.name}</h3>
                 <p class="card-text">${this.street}<br>${this.zipCode} ${this.city}</p>`
     }
     
@@ -96,7 +98,7 @@ class Locations {
 
 //Objects from class Locations:
 let church: any = new Locations ("St. Charles Church", "Karlsplatz 1", 1010, "Vienna", new Date(2021, 10, 2, 10, 15, 43), "img/church.jpg");
-let zoo = new Locations ("Zoo Vienna", "Maxingstrasse 13b", 1130, "Wien", new Date(2015, 7, 31, 12, 30, 33), "img/zoo.jpg");
+let zoo: any = new Locations ("Zoo Vienna", "Maxingstrasse 13b", 1130, "Wien", new Date(2015, 7, 31, 12, 30, 33), "img/zoo.jpg");
 
 
 //---------------- RESTAURANTS: child class of Locations 
@@ -126,9 +128,9 @@ class Restaurants extends Locations {//additional property: phone
 }
 
 // Objects from class Restaurants
-let thai = new Restaurants ("Lemon Leaf", "Thai Cuisine", "Kettenbrueckegasse 19", 1050, "Vienna", new Date(2019, 0, 1, 9, 0, 13), "img/thai_restaurant.png", "http://www.lemonleaf.at", "+43(1) 58 123 08");
+let thai: any = new Restaurants ("Lemon Leaf", "Thai Cuisine", "Kettenbrueckegasse 19", 1050, "Vienna", new Date(2019, 0, 1, 9, 0, 13), "img/thai_restaurant.png", "http://www.lemonleaf.at", "+43(1) 58 123 08");
 
-let sixta = new Restaurants ("Sixta", "Austrian Cuisine", "Schoenbrunner Strasse 21", 1050, "Wien", new Date(2020, 3, 22, 19, 15, 23), "img/sixta.png", "http://www.sixta-restaurant.at", "+43(1) 58 528 56 <br> +43(1) 58 528 56")
+let sixta: any = new Restaurants ("Sixta", "Austrian Cuisine", "Schoenbrunner Strasse 21", 1050, "Wien", new Date(2020, 3, 22, 19, 15, 23), "img/sixta.png", "http://www.sixta-restaurant.at", "+43(1) 58 528 56 <br> +43(1) 58 528 56")
 
 
 //---------------- EVENTS: child class of Locations
@@ -158,9 +160,9 @@ class Events extends Locations {//additional properties: eventDate, price
 }
 
 // Objects from the class Events 
-let kravitz: Object = new Events ("Lenny Kravitz", "Wiener Stadthalle - Halle D <br> Roland Rainer Platz 12", 1150, "Wien", new Date(2020, 4, 24, 20, 15, 54), "img/kravitz.jpg", "https://www.lennykravitz.com", "Sat, 09.12.2029 - 19:30", 47.80);
+let kravitz: any = new Events ("Lenny Kravitz", "Wiener Stadthalle - Halle D <br> Roland Rainer Platz 12", 1150, "Wien", new Date(2020, 4, 24, 20, 15, 54), "img/kravitz.jpg", "https://www.lennykravitz.com", "Sat, 09.12.2029 - 19:30", 47.80);
 
-let kristofferson: Object = new Events ("Kris Kristofferson", "Wiener Stadthalle, Halle F <br> Roland Rainer Platz 1", 1150, "Wien", new Date(2021, 8, 2, 23, 55, 58), "img/kristofferson.jpg", "http://kriskristofferson.com", "Fr., 15.11.2021. 20:00", 58.50);
+let kristofferson: any = new Events ("Kris Kristofferson", "Wiener Stadthalle, Halle F <br> Roland Rainer Platz 1", 1150, "Wien", new Date(2021, 8, 2, 23, 55, 58), "img/kristofferson.jpg", "http://kriskristofferson.com", "Fr., 15.11.2021. 20:00", 58.50);
 
 
 //Create an array of all object, before displaying them in HTML with a for of loop
@@ -169,3 +171,51 @@ let eventsArray: Array<Locations> = [church, zoo, thai, sixta, kravitz, kristoff
 for (let value of eventsArray){
     (document.getElementById("output")as HTMLElement).innerHTML += value.display();
 }
+
+
+// ---------------------------------------- SORTING BUTOTN
+let sort_btn = document.getElementById("sort-btn");
+
+// eventListener for sorting
+(sort_btn as HTMLElement).addEventListener("change", () => {
+    // empty the DOM from event cards
+    (document.getElementById("output")as HTMLElement).innerHTML = "";
+    if((sort_btn as HTMLSelectElement).value === "A-Z"){ // if option "A-Z" selected
+        // sort array name property in ASCENDING order
+        let arrayAZ: { name: string; }[] = eventsArray.sort((a, b) => {
+            if(a.name < b.name){
+                return -1;
+            } else if (a.name > b.name){
+                return 1;
+            } else {
+                return 0;
+            }
+        });
+
+        // loops through sorted array
+        for (let event of arrayAZ){
+            (document.getElementById("output")as HTMLElement).innerHTML += event.display();
+        }
+        // console.log(event)
+        console.log("Order is set to Ascendant")
+
+    } else if((sort_btn as HTMLSelectElement).value === "Z-A"){// if option "Z-A" selected
+        // sort array name property in DESCENDING order
+        let arrayZA: { name: string; }[] = eventsArray.sort((a, b) => {
+            if(a.name < b.name){
+                return 1;
+            } else if (a.name > b.name){
+                return -1;
+            } else {
+                return 0;
+            }
+        });
+
+        // loops through sorted array
+        for (let value of arrayZA){
+            (document.getElementById("output")as HTMLElement).innerHTML += value.display();
+        }
+        console.log("Order is set to Descendant")
+
+    });
+

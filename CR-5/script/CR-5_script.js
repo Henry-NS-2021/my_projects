@@ -2,7 +2,7 @@
 // ---------------------------------------- INSERT TEXT BEFORE THE BLOG ENTRIES
 let section = document.createElement("section");
 section.innerHTML = `
-<div id="intro">
+    <div id="intro">
     <h1>Travel-o-Matic Blog</h1>
     <p>Welcome to Austria, its various places, tastes, sounds and flavours</p>
     </div>
@@ -34,7 +34,7 @@ class Locations {
         <div id="card_settings" class="card my-2">
             <img id="card_img" class="card-img-top rounded" src="${this.img}" alt="${this.name}">
             <div class="card-body">
-                <h3 class="card-title text-center mb-3">${this.name}</h3>
+                <h3 class="card-title rounded-3 text-center mb-3">${this.name}</h3>
                 <p class="card-text">${this.street}<br>${this.zipCode} ${this.city}</p>`;
     }
     // format the dates
@@ -121,3 +121,49 @@ let eventsArray = [church, zoo, thai, sixta, kravitz, kristofferson];
 for (let value of eventsArray) {
     document.getElementById("output").innerHTML += value.display();
 }
+// ---------------------------------------- SORTING BUTOTN
+let sort_btn = document.getElementById("sort-btn");
+// eventListener for sorting
+sort_btn.addEventListener("change", () => {
+    // empty the DOM from event cards
+    document.getElementById("output").innerHTML = "";
+    if (sort_btn.value === "A-Z") { // if option "A-Z" selected
+        // sort array name property in ASCENDING order
+        let arrayAZ = eventsArray.sort((a, b) => {
+            if (a.name < b.name) {
+                return -1;
+            }
+            else if (a.name > b.name) {
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        });
+        // loops through sorted array
+        for (let event of arrayAZ) {
+            document.getElementById("output").innerHTML += event.display();
+        }
+        // console.log(event)
+        console.log("Order is set to Ascendant");
+    }
+    else if (sort_btn.value === "Z-A") { // if option "Z-A" selected
+        // sort array name property in DESCENDING order
+        let arrayZA = eventsArray.sort((a, b) => {
+            if (a.name < b.name) {
+                return 1;
+            }
+            else if (a.name > b.name) {
+                return -1;
+            }
+            else {
+                return 0;
+            }
+        });
+        // loops through sorted array
+        for (let value of arrayZA) {
+            document.getElementById("output").innerHTML += value.display();
+        }
+        console.log("Order is set to Descendant");
+    }
+});
